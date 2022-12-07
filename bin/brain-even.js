@@ -9,7 +9,7 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".')
 let answ = '\nYour answer: ';
 
 
-const play = () => {
+function play() {
 
 let useranswer = ''
 let yes = 'yes'
@@ -25,7 +25,7 @@ const quest = readlineSync.question('Question: ' + num() + answ + useranswer);
 let truly = 'Correct!';
 let falsy = (useranswer + " is wrong answer ;(. Correct answer was 'no'.\nLet's try again, " + userName);
 
-    function ifa() {
+    let newLocal = function ifa() {
         if (num() % 2 === 0 && quest === yes) {
             return truly;
         } if (num() % 2 === 0 && quest === no) {
@@ -38,7 +38,9 @@ let falsy = (useranswer + " is wrong answer ;(. Correct answer was 'no'.\nLet's 
             return falsy;
         }
     }
-    ifa();
+    return newLocal;
+    
 }
+
 play()
 
