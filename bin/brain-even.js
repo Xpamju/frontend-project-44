@@ -1,53 +1,33 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-// console.log('Welcome to the Brain Games!');
-// const userName = readlineSync.question('May I have your name? ');
-// console.log('Hello ,' + userName + '!');
 
-// console.log('Answer "yes" if the number is even, otherwise answer "no".')
-
-
-
-
-function play() {
-console.log('Welcome to the Brain Games!');
-const userName = readlineSync.question('May I have your name? ');
-console.log('Hello ,' + userName + '!');
-console.log('Answer "yes" if the number is even, otherwise answer "no".')
-
-
-let answ = '\nYour answer: ';
-let useranswer = ''
-let yes = 'yes'
-let no = 'no'
+function get_name(){
+    const userName = readlineSync.question('May I have your name? '); 
+    return userName;
+}
 
 function num() {
     let number = (Math.round(Math.random() * 100));
       return number;
     }
-  
+
+function game() {
+
+    console.log('Welcome to the Brain Games!');
+    let user = get_name()
+    console.log(`Hello ,${user}!`);
+    console.log('Answer "yes" if the number is even, otherwise answer "no".')
     
-const quest = readlineSync.question('Question: ' + num() + answ + useranswer);
-
-const quest2 = (`${quest} is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}.`);
-
-function ifa() {
-const quest2 = (`${quest} is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}.`);
-let truly = 'Correct!';
-    if (num() % 2 === 0 && quest === yes) {
-        console.log(truly)
-    } if (num() % 2 === 0 && quest === no) {
-        return quest2;
-    } if (num() % 2 !== 0 && quest === yes) {
-        return quest2;
-    } if (num() % 2 !== 0 && quest === no) {
-        return truly;
+    for(let i = 0; i < 3; i++) {
+        let numsave = num();
+        let quest = readlineSync.question('Question: ' + numsave + '\nYour answer: ');
+        if ((numsave % 2 === 0 && quest === 'yes') || (numsave % 2 !== 0 && quest === 'no')){
+             console.log ('Coorect!')
     } else {
-        return falsy;
+        console.log(`${quest} is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${user}.`)
+        return
     }
-    }
-return ifa;
 }
-
-play()
-
+console.log(`Congratulations, ${user}!`)
+};
+game();

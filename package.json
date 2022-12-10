@@ -23,6 +23,8 @@
     "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
+    "commander": "^9.4.1",
+    "inquirer": "^9.1.4",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
