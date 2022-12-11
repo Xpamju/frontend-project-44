@@ -47,7 +47,7 @@ let str = '';
         if (quest === rightansw) {
             console.log('Correct!')
         } else {
-            console.log(`${quest}${' is wrong answer ;(. Correct answer was '}${rightansw}${"\nLet's try again, Sam!"}`)
+            console.log(`${quest}${' is wrong answer ;(. Correct answer was '}${rightansw}${"\nLet's try again"},${user}`)
             return
         }
     }
