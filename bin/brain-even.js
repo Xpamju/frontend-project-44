@@ -19,7 +19,7 @@ function game() {
     console.log('Answer "yes" if the number is even, otherwise answer "no".')
     
     for(let i = 0; i < 3; i++) {
-        let numsave = num();
+        let numsave = num()
         let quest = readlineSync.question('Question: ' + numsave + '\nYour answer: ');
         if ((numsave % 2 === 0 && quest === 'yes') || (numsave % 2 !== 0 && quest === 'no')){
              console.log ('Coorect!')
@@ -29,5 +29,5 @@ function game() {
     }
 }
 console.log(`Congratulations, ${user}!`)
-};
-game();
+}
+game()
