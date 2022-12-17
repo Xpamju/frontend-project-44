@@ -23,7 +23,7 @@ function ifprime(n) {
 function primeGame() {
   console.log('Welcome to the Brain Games!');
   const user = getName();
-  console.log(`Hello, ${user}!`);
+  console.log(`Hello ,${user}!`);
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const number = num();
