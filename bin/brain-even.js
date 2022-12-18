@@ -14,7 +14,7 @@ function num() {
 function game() {
   console.log('Welcome to the Brain Games!');
   const user = getName();
-  console.log(`Hello ,${user}!`);
+  console.log(`Hello, ${user}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const numsave = num();
