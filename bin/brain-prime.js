@@ -15,9 +15,8 @@ function num() {
 function ifprime(n) {
   if (n > 1 && n % 2 !== 0) {
     return 'yes';
-  } else {
-    return 'no';
-  }
+  } 
+  return 'no';
 }
 
 function primeGame() {
