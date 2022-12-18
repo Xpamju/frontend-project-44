@@ -8,4 +8,4 @@ function getName() {
 
 console.log('Welcome to the Brain Games!');
 const user = getName();
-console.log(`Hello ,${user}!`);
+console.log(`Hello, ${user}!`);
