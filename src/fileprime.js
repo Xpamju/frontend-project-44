@@ -8,7 +8,7 @@ function num() {
   }
   
   function ifprime(n) {
-    if (n > 1 && n % 2 !== 0) {
+    if (n > 1 && n % 3 !== 0 && n % 2 !== 0 && n % 3 !== 0) {
       return 'yes';
     } 
     return 'no';
@@ -24,7 +24,7 @@ export default function primeGame() {
     if (quest === rigthansw) {
       console.log('Correct!');
     } else {
-      console.log(`${quest} ${'is wrong answer ;(. Correct answer was'} ${rigthansw}. ${"\nLet's try again"}, ${userName}!`);
+      console.log(`${quest} ${'is wrong answer ;(. Correct answer was'} ${rigthansw}.${"\nLet's try again"}, ${userName}!`);
       return;
     }
   }
