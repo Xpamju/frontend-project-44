@@ -6,4 +6,4 @@ export default function brainGame() {
   userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 }
-export {userName}
+export { userName };

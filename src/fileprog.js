@@ -1,11 +1,6 @@
 import readlineSync from 'readline-sync';
-import {userName} from './cli.js';
-import brainGame from '../src/cli.js';
-
-function getName() {
-  const userName = readlineSync.question('May I have your name? ');
-  return userName;
-}
+import { userName } from './cli.js';
+import brainGame from './cli.js';
 
 function num() {
   const rand = 2 + Math.random() * (7 - 1);
