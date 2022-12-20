@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import { userName } from './cli.js';
 import brainGame from './cli.js';
 
 function num() {
@@ -8,11 +7,11 @@ function num() {
 }
 
 export default function game() {
-  brainGame();
+  const userName = brainGame();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const numsave = num();
-    const quest = readlineSync.question('Question: ' + numsave + '\nYour answer: ');
+    const quest = readlineSync.question(`${'Question: '}${numsave}${'\nYour answer: '}`);
     if ((numsave % 2 === 0 && quest === 'yes') || (numsave % 2 !== 0 && quest === 'no')) {
       console.log('Coorect!');
     } else {

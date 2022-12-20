@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import { userName } from './cli.js';
 import brainGame from './cli.js';
 
 function num() {
@@ -43,7 +42,7 @@ function ad() {
 }
 
 export default function gameprogressive() {
-  brainGame();
+  const userName = brainGame();
   console.log('What number is missing in the progression?');
   for (let i = 0; i < 3; i += 1) {
     const data = ad();

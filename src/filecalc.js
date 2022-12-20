@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import { userName } from './cli.js';
 import brainGame from './cli.js';
 
 function num() {
@@ -22,12 +21,14 @@ function calculate(num1, num2, sign) {
       return num1 + num2;
     case '-':
       return num1 - num2;
+    default:
+      console.log('error');
   }
   return sign;
 }
 
 export default function gamecalc() {
-  brainGame();
+  const userName = brainGame();
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
     const num1 = num();

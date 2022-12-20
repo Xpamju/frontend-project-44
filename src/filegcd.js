@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import { userName } from './cli.js';
 import brainGame from './cli.js';
 
 function num() {
@@ -14,7 +13,7 @@ function NOD(x, y) {
 }
 
 export default function gameGcd() {
-  brainGame();
+  const userName = brainGame();
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i += 1) {
     const num1 = num();
@@ -24,7 +23,7 @@ export default function gameGcd() {
     const rightansw = NOD(num1, num2);
     const answstr = `${str}${rightansw}`;
     if (quest === answstr) {
-      console.log('Correct!')
+      console.log('Correct!');
     } else {
       console.log(`${quest}${' is wrong answer ;(. Correct answer was '}${answstr}${"\nLet's try again"}, ${userName}!`);
       return;
