@@ -7,13 +7,29 @@ function num() {
     return number;
   }
   
+  // function ifprime(n) {
+  //   if (n > 1 && n % 3 !== 0 && n % 2 !== 0 && n % 3 !== 0) {
+  //     return 'yes';
+  //   } 
+  //   return 'no';
+  // }
+
   function ifprime(n) {
-    if (n > 1 && n % 3 !== 0 && n % 2 !== 0 && n % 3 !== 0) {
+    if (n===1)  {
+      return 'no';
+    }
+    else if(n === 2)  {
       return 'yes';
-    } 
-    return 'no';
+    } else   {
+      for(var x = 2; x < n; x++)  {
+        if(n % x === 0) {
+          return 'no';
+        }
+      }
+      return 'yes';  
+    }
   }
-  
+
 export default function primeGame() {
  brainGame()
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
