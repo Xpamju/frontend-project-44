@@ -19,7 +19,7 @@ export default function primeGame() {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const number = num();
-    const quest = readlineSync.question(`${'Question: '} ${number} ${'\nYour answer: '}`);
+    const quest = readlineSync.question(`${'Question: '}${number} ${'\nYour answer: '}`);
     const rigthansw = ifprime(number);
     if (quest === rigthansw) {
       console.log('Correct!');
