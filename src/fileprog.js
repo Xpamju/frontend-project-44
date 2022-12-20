@@ -54,8 +54,7 @@ export default function gameprogressive() {
     const data = ad();
     const magicNum = data[1];
     const newstr1 = data[0];
-    // const ind = data[2];
-    const quest = readlineSync.question(`${'Question: '} ${newstr1} ${'\nYour answer: '}`);
+    const quest = readlineSync.question(`${'Question: '}${newstr1} ${'\nYour answer: '}`);
     let rightansw = '';
     rightansw = `${rightansw}${magicNum}`;
     if (quest === rightansw) {
