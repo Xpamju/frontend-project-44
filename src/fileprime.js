@@ -24,7 +24,7 @@ export default function primeGame() {
     if (quest === rigthansw) {
       console.log('Correct!');
     } else {
-      console.log(`${quest} ${'is wrong answer ;(. Correct answer was'} ${rigthansw}. ${"\nLet's try again"}, ${userName}`);
+      console.log(`${quest} ${'is wrong answer ;(. Correct answer was'} ${rigthansw}. ${"\nLet's try again"}, ${userName}!`);
       return;
     }
   }

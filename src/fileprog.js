@@ -61,7 +61,7 @@ export default function gameprogressive() {
     if (quest === rightansw) {
       console.log('Correct!');
     } else {
-      console.log(`${quest} ${'is wrong answer ;(. Correct answer was'} ${rightansw}. ${"\nLet's try again"}, ${userName}`);
+      console.log(`${quest} ${'is wrong answer ;(. Correct answer was'} ${rightansw}. ${"\nLet's try again"}, ${userName}!`);
       return;
     }
   }
